@@ -4,10 +4,11 @@ Copyright: Wilde Consulting
   License: Apache 2.0
 
 VERSION INFO::
+
     $Repo: fastapi_https
   $Author: Anders Wiklund
-    $Date: 2024-03-18 15:01:47
-     $Rev: 1
+    $Date: 2024-03-18 15:47:18
+     $Rev: 4
 """
 
 # BUILTIN modules
@@ -56,6 +57,7 @@ class HealthResponseModel(BaseModel):
     :ivar status: Overall health status
     :ivar version: Service version.
     :ivar resources: Status for individual resources.
+    :ivar cert_remaining_days: Remaining SSL/TLS certificate valid days.
     """
     name: str
     status: bool
@@ -70,7 +72,7 @@ class ProcessResponseModel(BaseModel):
     """ Define OpenApi model for API process_payload responses.
 
     :ivar id: Task ID for the current job.
-    :ivar status: Response status (REVOKED|STARTED|PENDING|RETRY|FAILURE|SUCCESS).
+    :ivar status: Response status (FAILURE|SUCCESS).
     """
     id: UUID4
     status: str

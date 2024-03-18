@@ -163,4 +163,5 @@ cython_debug/
 .build
 certs/
 apidocs/
+requirements-dev.*
 .pre-commit-repo.json

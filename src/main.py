@@ -4,10 +4,11 @@ Copyright: Wilde Consulting
   License: Apache 2.0
 
 VERSION INFO::
+
     $Repo: fastapi_https
   $Author: Anders Wiklund
-    $Date: 2024-03-18 15:01:47
-     $Rev: 1
+    $Date: 2024-03-18 15:47:18
+     $Rev: 4
 """
 
 # Third party modules
@@ -25,6 +26,7 @@ app = FastAPI(
     title=config.name,
     version=config.version,
 )
+""" FastAPI app instantiation. """
 
 app.include_router(process_routes.ROUTER)
 app.include_router(health_route.ROUTER)
