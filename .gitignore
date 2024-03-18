@@ -165,3 +165,4 @@ certs/
 apidocs/
 requirements-dev.*
 .pre-commit-repo.json
+.pre-commit-config.yaml
